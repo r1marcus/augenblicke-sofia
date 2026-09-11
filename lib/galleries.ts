@@ -10,7 +10,7 @@ export interface Gallery {
 export const galleries: Gallery[] = [
   {
     "slug": "salome-marco",
-    "title": "Salome & Marco 2026",
+    "title": "Salome & Marco",
     "category": "Paar",
     "cover": "/images/salome-marco/DSC03888.jpg",
     "images": [
@@ -37,7 +37,7 @@ export const galleries: Gallery[] = [
   },
   {
     "slug": "emilie-erik",
-    "title": "Emilie & Erik 2026",
+    "title": "Emilie & Erik",
     "category": "Hochzeit",
     "cover": "/images/emilie-erik/DSC04451.jpg",
     "images": [
