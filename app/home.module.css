@@ -1,0 +1,43 @@
+/* Three-up portrait triptych — the images are the hero. */
+.hero {
+  display: flex;
+  gap: 8px;
+  height: clamp(540px, calc(100vh - var(--header-h) - 3rem), 920px);
+  padding: 0 8px;
+}
+
+.heroSlide {
+  position: relative;
+  flex: 1 0 calc((100% - 16px) / 3);
+  overflow: hidden;
+  background: var(--bg-warm);
+}
+
+.heroImg {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 1.2s var(--ease);
+}
+
+.heroSlide:hover .heroImg {
+  transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: 72vh;
+    gap: 6px;
+    padding: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .hero::-webkit-scrollbar {
+    display: none;
+  }
+  .heroSlide {
+    flex: 0 0 86%;
+    scroll-snap-align: center;
+  }
+}

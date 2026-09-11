@@ -1,0 +1,53 @@
+.split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+/* Two-portrait diptych next to the intro text */
+.portraitPair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background: var(--bg-warm);
+  overflow: hidden;
+}
+
+.portraitImg {
+  object-fit: cover;
+}
+
+.text {
+  max-width: 40ch;
+}
+
+/* Single, contained portrait (family photo) — never full-bleed */
+.single {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+  aspect-ratio: 2 / 3;
+  background: var(--bg-warm);
+  overflow: hidden;
+}
+
+.singleImg {
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .text {
+    max-width: none;
+  }
+}

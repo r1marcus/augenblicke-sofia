@@ -1,0 +1,61 @@
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.intro {
+  max-width: 46ch;
+}
+
+.direct {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.direct a,
+.direct span {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  color: var(--text);
+}
+
+.direct span {
+  color: var(--text-muted);
+}
+
+.direct a:hover {
+  color: var(--accent);
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 2 / 3; /* matches the portrait so nothing is cropped */
+  background: var(--bg-warm);
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.photoImg {
+  object-fit: cover;
+}
+
+.formWrap {
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .intro {
+    max-width: none;
+  }
+}

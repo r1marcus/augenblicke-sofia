@@ -1,0 +1,42 @@
+.doc {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.doc h1 {
+  margin-bottom: 2rem;
+}
+
+.doc h2 {
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.doc p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.doc a {
+  color: var(--accent);
+  word-break: break-word;
+}
+
+.doc a:hover {
+  text-decoration: underline;
+}
+
+.todo {
+  background: var(--bg-warm);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.stand {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
